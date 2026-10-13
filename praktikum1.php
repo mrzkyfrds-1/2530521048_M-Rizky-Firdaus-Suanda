@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fakultas     = $_POST["fakultas"] ?? "";
     $prodi        = $_POST["prodi"] ?? "";
     $asal_sekolah = $_POST["asal_sekolah"] ?? "";
-    $alamat_sekolah = $_POST[""] ??
+    $alamat_sekolah = $_POST["alamat_sekolah"] ?? "";
     $semester     = $_POST["semester"] ?? "";
     $hobi         = !empty($_POST["hobi"]) ? $_POST["hobi"] : "-";
 }
@@ -138,12 +138,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-size: 16px;
             color: #4a5568;
             line-height: 1.5;
+            display: grid;
+            grid-template-collums: 150px 1fr;
+            gap: 10px
         }
 
         .hasil strong {
             color: #2d3748;
-            display: inline-block;
-            width: 140px;
         }
     </style>
 
